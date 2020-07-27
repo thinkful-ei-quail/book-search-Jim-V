@@ -1,0 +1,32 @@
+.volume {
+  display: flex;
+  justify-content: space-around ;
+  flex-direction: row;
+  margin: auto;
+  padding: 25px 0 10px 0;
+  border-bottom: solid thin lightslategray;
+}
+
+.book-thumbnail img {
+  width: 100%;
+}
+
+.book-thumbnail {
+  flex: 1;
+}
+
+.book-details {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p.author, p.price {
+  padding: 0;
+  margin: 0;
+}
