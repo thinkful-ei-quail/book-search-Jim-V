@@ -13,7 +13,11 @@ export default class Books extends React.Component
     render()
     {
         const {volumes = []} = this.props;
-        console.log(this.generateBooks(volumes));
+        if(volumes.length === 0)
+        {
+            return (<div>Nothing to show yet</div>);
+        }
+        console.log(volumes);
         return (<div>{this.generateBooks(volumes)}</div>);
     }
 }

@@ -7,7 +7,7 @@ export default class BookSearch extends React.Component
 
     state = {
         volumes: [],
-        urlData:{search:"Latest crap",apiKey:"AIzaSyCqu7vP5nWWE7dYWyVxGKEHDsC9hTJuWwo",filter:"ebooks", printType:"all"}
+        urlData:{search:"Latest",apiKey:"AIzaSyCqu7vP5nWWE7dYWyVxGKEHDsC9hTJuWwo",filter:"ebooks", printType:"all"}
 
     }
     searchApi(url)
@@ -28,14 +28,18 @@ export default class BookSearch extends React.Component
         return url;
         
     }
-
+    componentDidMount()
+    {
+        this.searchApi(this.getUrl());
+    }
     render()
     {
         const {volumes, urlData} = this.state;
+        
         return (<div className="BookSearchApp">
                     <header>
                     <h1>Book Search</h1>
-                    <p>Got books? Why yes, we have books.</p>
+                    <p id="slogan">Got books? Why yes, we have books.</p>
             
                     <form id="booksearch" onSubmit={(e) => {
                         e.preventDefault();
